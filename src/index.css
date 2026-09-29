@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #071A2F;
+  --color-navy-dark: #061321;
+  --color-ocean: #086A9A;
+  --color-cyan: #18C8D8;
+  --color-cyan-glow: #18C8D840;
+  --color-gold: #D9A441;
+  --color-gold-light: #F4D085;
+  --color-text-navy: #102337;
+  --color-slate-text: #64748B;
+  --color-bg-soft: #F6F8FA;
+
+  --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: #E2E8F0;
+  }
+  
+  body {
+    background-color: #F6F8FA;
+    color: #102337;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #061321;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #102337;
+    border-radius: 4px;
+    border: 1px solid rgba(24, 200, 216, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #086A9A;
+  }
+}
+
+/* Glassmorphism & Luxury effects */
+.glass-dark {
+  background: rgba(7, 26, 47, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(24, 200, 216, 0.15);
+}
+
+.glass-nav {
+  background: rgba(6, 19, 33, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(6, 19, 33, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(24, 200, 216, 0.12);
+}
+
+/* Metallic gradient text inspired by the VELORA emblem */
+.text-metallic {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #94A3B8 70%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FBE08D 0%, #D9A441 50%, #B88329 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #E0F7FA 0%, #18C8D8 60%, #086A9A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle glow */
+.cyan-glow {
+  box-shadow: 0 0 25px -4px rgba(24, 200, 216, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -4px rgba(217, 164, 65, 0.35);
+}
+
+/* Subtle hover card transitions */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Lenis Ultra-Smooth Scroll Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Section transitions & accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

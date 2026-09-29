@@ -13,7 +13,6 @@ const PackageDetailsPage = lazy(() => import('./pages/PackageDetails/PackageDeta
 const HotelsPage = lazy(() => import('./pages/Hotels/HotelsPage').then((m) => ({ default: m.HotelsPage })));
 const HotelDetailsPage = lazy(() => import('./pages/HotelDetails/HotelDetailsPage').then((m) => ({ default: m.HotelDetailsPage })));
 const ExperiencesPage = lazy(() => import('./pages/Experiences/ExperiencesPage').then((m) => ({ default: m.ExperiencesPage })));
-const GalleryPage = lazy(() => import('./pages/Gallery/GalleryPage').then((m) => ({ default: m.GalleryPage })));
 const AboutPage = lazy(() => import('./pages/About/AboutPage').then((m) => ({ default: m.AboutPage })));
 const ContactPage = lazy(() => import('./pages/Contact/ContactPage').then((m) => ({ default: m.ContactPage })));
 const BookingPage = lazy(() => import('./pages/Booking/BookingPage').then((m) => ({ default: m.BookingPage })));
@@ -26,7 +25,6 @@ const AdminPackagesPage = lazy(() => import('./admin/Packages/AdminPackagesPage'
 const AdminHotelsPage = lazy(() => import('./admin/Hotels/AdminHotelsPage').then((m) => ({ default: m.AdminHotelsPage })));
 const AdminBookingsPage = lazy(() => import('./admin/Bookings/AdminBookingsPage').then((m) => ({ default: m.AdminBookingsPage })));
 const AdminCustomersPage = lazy(() => import('./admin/Customers/AdminCustomersPage').then((m) => ({ default: m.AdminCustomersPage })));
-const AdminGalleryPage = lazy(() => import('./admin/Gallery/AdminGalleryPage').then((m) => ({ default: m.AdminGalleryPage })));
 const AdminSettingsPage = lazy(() => import('./admin/Settings/AdminSettingsPage').then((m) => ({ default: m.AdminSettingsPage })));
 
 /**
@@ -70,7 +68,6 @@ export function App() {
               <Route path="/hotels" element={<HotelsPage />} />
               <Route path="/hotels/:slug" element={<HotelDetailsPage />} />
               <Route path="/experiences" element={<ExperiencesPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/booking" element={<BookingPage />} />
@@ -85,7 +82,6 @@ export function App() {
               <Route path="hotels" element={<AdminHotelsPage />} />
               <Route path="bookings" element={<AdminBookingsPage />} />
               <Route path="customers" element={<AdminCustomersPage />} />
-              <Route path="gallery" element={<AdminGalleryPage />} />
               <Route path="settings" element={<AdminSettingsPage />} />
             </Route>
           </Routes>

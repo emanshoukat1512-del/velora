@@ -58,11 +58,6 @@ export const Footer: React.FC = () => {
                   Curated Experiences
                 </Link>
               </li>
-              <li>
-                <Link to="/gallery" className="hover:text-[#18C8D8] transition">
-                  Visual Gallery
-                </Link>
-              </li>
             </ul>
           </div>
 

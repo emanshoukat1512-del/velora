@@ -7,7 +7,6 @@ import {
   Building2,
   CalendarCheck2,
   Users,
-  Image as ImageIcon,
   Settings,
   ExternalLink,
   Menu,
@@ -29,7 +28,6 @@ export const AdminLayout: React.FC = () => {
     { label: 'Hotels', path: '/admin/hotels', icon: Building2 },
     { label: 'Bookings', path: '/admin/bookings', icon: CalendarCheck2 },
     { label: 'Customers', path: '/admin/customers', icon: Users },
-    { label: 'Gallery', path: '/admin/gallery', icon: ImageIcon },
     { label: 'Settings', path: '/admin/settings', icon: Settings }
   ];
 
